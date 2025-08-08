@@ -41,6 +41,7 @@ export default function WaterPage() {
 
   return (
     <div className="space-y-6">
+      {/* Breadcrumbs in layout replace Back button */}
       <div className="flex items-center gap-3">
         <div className="p-2 rounded-lg bg-brand-100 text-brand-800 dark:bg-brand-900/40 dark:text-brand-100">
           <WaterIcon className="h-6 w-6" />

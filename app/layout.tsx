@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { TopNav } from '@/components/TopNav'
+import { Breadcrumbs } from '@/components/Breadcrumbs'
 
 export const metadata: Metadata = {
   title: "Pool Dashboard • Proline Atlantis 15'×30'",
@@ -13,7 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body>
         <TopNav />
-        <main className="container-padded py-6 md:py-8">{children}</main>
+        <main className="container-padded py-6 md:py-8">
+          <Breadcrumbs />
+          <div className="mt-3">{children}</div>
+        </main>
       </body>
     </html>
   )
