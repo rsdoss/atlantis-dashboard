@@ -102,8 +102,9 @@ export default function WaterPage() {
             </Field>
             <div className="col-span-2">
               <label className="text-sm font-medium text-slate-700 dark:text-slate-200">Notes</label>
-              <textarea className="mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-2"
-                        rows={3} value={reading.Notes ?? ''} onChange={e=> setReading(prev => ({...prev, Notes: e.target.value}))}/>
+              <textarea className="input" rows={3}
+                        value={reading.Notes ?? ''}
+                        onChange={e=> setReading(prev => ({...prev, Notes: e.target.value}))}/>
             </div>
           </div>
           <div className="mt-4 flex gap-3">
@@ -167,7 +168,7 @@ function Field({ label, children, placeholder }: { label: string, children: Reac
       {children}
       {placeholder && <div className="text-xs text-slate-500 mt-1">{placeholder}</div>}
       <style jsx>{`
-        .input{ @apply mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 p-2; }
+        .input{ @apply mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-2; }
       `}</style>
     </label>
   )
