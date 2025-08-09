@@ -31,6 +31,11 @@ button.btn-outline {
   @apply inline-flex items-center justify-center rounded-lg px-4 py-2.5 text-sm font-semibold transition
          border border-slate-300 dark:border-slate-600 text-slate-800 dark:text-slate-100 hover:bg-slate-100/40 dark:hover:bg-slate-800/40;
 }
+.input {
+  @apply mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 p-2
+         bg-slate-50 dark:bg-slate-800 text-black dark:text-slate-100
+         placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus-visible:ring focus-visible:ring-brand-400/60;
+}
 .badge {
   @apply inline-flex items-center gap-1 rounded-full bg-brand-100 text-brand-800 dark:bg-brand-900/40 dark:text-brand-200 px-2 py-0.5 text-xs font-medium;
 }

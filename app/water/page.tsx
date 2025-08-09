@@ -167,9 +167,6 @@ function Field({ label, children, placeholder }: { label: string, children: Reac
       <div className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</div>
       {children}
       {placeholder && <div className="text-xs text-slate-500 mt-1">{placeholder}</div>}
-      <style jsx>{`
-        .input{ @apply mt-1 w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 p-2; }
-      `}</style>
     </label>
   )
 }
