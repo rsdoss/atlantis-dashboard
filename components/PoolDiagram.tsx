@@ -50,7 +50,7 @@ export function PoolDiagram() {
               <input type="range" min={40} max={52} step={1} value={depthInches}
                      onChange={(e)=> setDepthInches(parseInt(e.target.value))}
                      className="w-full" />
-              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">{depthInches}"</div>
+              <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">{depthInches}″</div>
             </label>
             <label className="block">
               <div className="text-sm font-medium text-slate-700 dark:text-slate-200">Volume model</div>
@@ -73,16 +73,16 @@ export function PoolDiagram() {
             {gallons.toLocaleString(undefined, { maximumFractionDigits: 0 })} <span className="text-base font-semibold">gal</span>
           </div>
           <div className="text-xs text-slate-500 mt-2">
-            Calculated from 30' × 15' footprint. Depth slider lets you set actual water line.
+            Calculated from 30′ × 15′ footprint. Depth slider lets you set actual water line.
           </div>
         </div>
         <div className="card p-4">
           <div className="text-sm text-slate-600 dark:text-slate-300">Specs</div>
           <ul className="mt-2 space-y-1 text-sm">
             <li><span className="badge">Model</span> Proline Atlantis (oval)</li>
-            <li><span className="badge">Size</span> 15' × 30'</li>
-            <li><span className="badge">Wall height</span> 52"</li>
-            <li><span className="badge">Top rail</span> ~6"</li>
+            <li><span className="badge">Size</span> 15′ × 30′</li>
+            <li><span className="badge">Wall height</span> 52″</li>
+            <li><span className="badge">Top rail</span> ~6″</li>
             <li><span className="badge">Supports</span> Buttress (oval)</li>
           </ul>
           <div className="text-xs text-slate-500 mt-3">

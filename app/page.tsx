@@ -8,7 +8,7 @@ export default function HomePage() {
       <section className="card p-6">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
-            <h1 className="hero">Proline Atlantis — 15' × 30' Oval</h1>
+            <h1 className="hero">Proline Atlantis — 15′ × 30′ Oval</h1>
             <p className="mt-2 text-slate-600 dark:text-slate-300 max-w-2xl">
               A modern home dashboard for your specific pool. Click a section to drill in,
               or adjust the depth slider to refine the live volume estimate.
