@@ -16,6 +16,43 @@
 - `pnpm lint` (`--fix` optional): Lint using Next/ESLint rules.
   - Use `npm`/`yarn` equivalents if you don’t use `pnpm`.
 
+## Content Sources & Pages
+
+- Source docs in repo root feed the App Router pages:
+  - `pump-details.md` → `app/pump/page.tsx` (implemented)
+  - `filter-hardware.md` → `app/filter/page.tsx` (implemented)
+  - `structure-pool.md` → `app/structure/page.tsx` (implemented)
+- Each page follows a consistent pattern:
+  - Overview (key stats via `components/Stat`)
+  - Safety callouts (brief, high‑signal bullets)
+  - Installation/Setup or Anatomy
+  - Operation / Maintenance / Checklists
+  - Troubleshooting tiles
+  - Optional: read‑only “Suggested Dashboard Fields” code block (omit if redundant)
+
+## Lint & Build Notes
+
+- ESLint is configured via `.eslintrc.json` extending `next/core-web-vitals`.
+- Next added its TypeScript plugin to `tsconfig.json` (and `.next/types` include).
+- Common lint gotcha: `react/no-unescaped-entities` will fail Vercel builds.
+  - Prefer typographic primes (`15′ × 30′`) or HTML entities (`&apos;`, `&quot;`) instead of raw `'` and `"` in JSX text.
+  - Use inch symbol (`″`) instead of a raw double quote for measurements where appropriate.
+- When running `next lint`, prefer scoping to changed files locally, e.g. `npx next lint --file app/pump/page.tsx`.
+
+## Forms & Inputs
+
+- Use the global `.input` utility class (defined in `app/globals.css`) for text inputs and textareas to ensure contrast:
+  - Light: `bg-slate-50` with `text-black`
+  - Dark: `dark:bg-slate-800` with `dark:text-slate-100`
+  - Includes borders and a visible focus ring.
+- Prefer this class over ad‑hoc styled‑jsx for consistency and accessibility.
+
+## Testing Status
+
+- `vitest.config.ts` is present (jsdom), but `vitest` is not yet installed in `devDependencies`.
+  - Tests will fail to run until `vitest` (and any RTL libs you need) are added.
+  - To enable: `npm i -D vitest @testing-library/react @testing-library/jest-dom` (optional), then `npm run test`.
+
 ## Coding Style & Naming Conventions
 
 - **Language**: TypeScript + React 18 on Next.js 14 (App Router).
